@@ -387,6 +387,13 @@ body {
   margin-bottom: 28px;
   letter-spacing: 0.06em;
   text-wrap: balance;
+  word-break: keep-all;
+  overflow-wrap: normal;
+  line-break: strict;
+}
+
+.ql-no-break {
+  display: inline-block;
 }
 
 .ql-options { display: flex; flex-direction: column; gap: 12px; }
@@ -830,7 +837,11 @@ body {
   .ql-title { font-size: 26px; line-height: 1.4; }
   .ql-scene-box { padding: 18px 20px; border-radius: 16px; gap: 12px; }
   .ql-scene { font-size: 15px; line-height: 1.7; }
-  .ql-q-text { font-size: 16px; line-height: 1.6; }
+  .ql-q-text {
+    font-size: 16px;
+    line-height: 1.6;
+    text-wrap: pretty;
+  }
   .ql-scene-icon-wrap { width: 42px; height: 42px; border-radius: 11px; }
   .ql-opt { padding: 16px 20px; border-radius: 16px; font-size: 14px; gap: 14px; }
   .ql-opt-letter { width: 28px; height: 28px; font-size: 12px; }
@@ -952,6 +963,7 @@ body {
         <button class="ql-opt" data-val="0"><span class="ql-opt-letter">D</span><span class="ql-opt-text">腦袋一片空白，什麼也不想</span></button>
       </div>
       <a href="#service-page" class="ql-quiz-skip" onclick="goToService(event)">直接了解服務內容</a>
+      <a href="javascript:void(0)" class="ql-quiz-skip" onclick="goToQuiz()" style="margin-top:4px;">回到首頁</a>
     </div>
 
     <!-- Q2 -->
@@ -976,6 +988,7 @@ body {
         <button class="ql-opt" data-val="0"><span class="ql-opt-letter">D</span><span class="ql-opt-text">一面鏡子。你看了一眼，又把書闔上了</span></button>
       </div>
       <a href="#service-page" class="ql-quiz-skip" onclick="goToService(event)">直接了解服務內容</a>
+      <a href="javascript:void(0)" class="ql-quiz-skip" onclick="goToQuiz()" style="margin-top:4px;">回到首頁</a>
     </div>
 
     <!-- Q3 -->
@@ -999,6 +1012,7 @@ body {
         <button class="ql-opt" data-val="0"><span class="ql-opt-letter">D</span><span class="ql-opt-text">好像從來沒有過那種感覺</span></button>
       </div>
       <a href="#service-page" class="ql-quiz-skip" onclick="goToService(event)">直接了解服務內容</a>
+      <a href="javascript:void(0)" class="ql-quiz-skip" onclick="goToQuiz()" style="margin-top:4px;">回到首頁</a>
     </div>
 
     <!-- Q4 -->
@@ -1022,6 +1036,7 @@ body {
         <button class="ql-opt" data-val="0"><span class="ql-opt-letter">D</span><span class="ql-opt-text">站在原地等，總有一條路會有人帶我去</span></button>
       </div>
       <a href="#service-page" class="ql-quiz-skip" onclick="goToService(event)">直接了解服務內容</a>
+      <a href="javascript:void(0)" class="ql-quiz-skip" onclick="goToQuiz()" style="margin-top:4px;">回到首頁</a>
     </div>
 
     <!-- Q5 -->
@@ -1044,6 +1059,7 @@ body {
         <button class="ql-opt" data-val="0"><span class="ql-opt-letter">D</span><span class="ql-opt-text">沈默很久。守橋人微笑著說：「沒關係，慢慢來。」</span></button>
       </div>
       <a href="#service-page" class="ql-quiz-skip" onclick="goToService(event)">直接了解服務內容</a>
+      <a href="javascript:void(0)" class="ql-quiz-skip" onclick="goToQuiz()" style="margin-top:4px;">回到首頁</a>
     </div>
 
     <!-- Q6 -->
@@ -1067,6 +1083,7 @@ body {
         <button class="ql-opt" data-val="0"><span class="ql-opt-letter">D</span><span class="ql-opt-text">什麼夢？我想不起來了</span></button>
       </div>
       <a href="#service-page" class="ql-quiz-skip" onclick="goToService(event)">直接了解服務內容</a>
+      <a href="javascript:void(0)" class="ql-quiz-skip" onclick="goToQuiz()" style="margin-top:4px;">回到首頁</a>
     </div>
 
     <!-- Q7 -->
@@ -1082,7 +1099,7 @@ body {
         </div>
         <p class="ql-scene">你走進了村落最深處的一間小屋。門上寫著「靜心室」。推開門，裡面只有一面牆，牆上浮現一行字——</p>
       </div>
-      <h3 class="ql-q-text">「你願不願意花一段時間，好好認識自己？」</h3>
+      <h3 class="ql-q-text">「你願不願意花<span class="ql-no-break">一段時間</span>，好好認識自己？」</h3>
       <div class="ql-options">
         <button class="ql-opt" data-val="3"><span class="ql-opt-letter">A</span><span class="ql-opt-text">很願意，這件事我覺得值得</span></button>
         <button class="ql-opt" data-val="2"><span class="ql-opt-letter">B</span><span class="ql-opt-text">願意，但不知道該怎麼開始</span></button>
@@ -1111,6 +1128,7 @@ body {
         <button class="ql-opt" data-val="0"><span class="ql-opt-letter">D</span><span class="ql-opt-text">「站在原地，等一個人來告訴你方向。」</span></button>
       </div>
       <a href="#service-page" class="ql-quiz-skip" onclick="goToService(event)">直接了解服務內容</a>
+      <a href="javascript:void(0)" class="ql-quiz-skip" onclick="goToQuiz()" style="margin-top:4px;">回到首頁</a>
     </div>
 
     <!-- ╔══ 結果頁 ══╗ -->
@@ -2044,7 +2062,7 @@ function goToService(e) {
         </div>
         <div class="phase-badge" style="border-left-color:rgba(255,248,240,0.16);">
           <span class="badge-price" style="color:var(--gold-light); font-size:26px;">$2,799</span>
-          <span class="badge-note" style="color:rgba(245,239,228,0.5);">祝福價（定價 $8,800）</span>
+          <span class="badge-note" style="color:rgba(245,239,228,0.5);">祝福價（原價 $8,800）</span>
         </div>
       </div>
 
@@ -2655,7 +2673,7 @@ nav .inner {
 .hero-deco--compass {
   width: 280px; height: 280px;
   top: 10px; right: -30px;
-  opacity: 0.25;
+  opacity: 0.15;
   animation: svcHeroFadeUp 1.2s ease both;
   animation-delay: 0.3s;
 }
@@ -3332,7 +3350,9 @@ nav .inner {
   color: rgba(212,175,112,0.7);
   font-style: italic;
   letter-spacing: 0.02em;
-  line-height: 1.8;
+  line-height: 2;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 .phase-upsell strong {
   color: rgba(212,175,112,0.9);
@@ -3921,7 +3941,7 @@ footer .copy {
     min-height: 0 !important;
     align-items: flex-start;
   }
-  .hero-deco--compass { width: 160px; height: 160px; top: -10px; right: -20px; opacity: 0.25; }
+  .hero-deco--compass { width: 160px; height: 160px; top: -10px; right: -20px; opacity: 0.1; }
   .hero-deco--gems { width: 100px; height: 130px; bottom: 20px; left: -10px; opacity: 0.65; }
   #hero::before, #hero::after { display: none; }
 
